@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotNetJourney")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da21f6b7cc09fa9264379864338a82d35b698057")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f1e063a3ba90709d88e35c9428825510a0e0781")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotNetJourney")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotNetJourney")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
