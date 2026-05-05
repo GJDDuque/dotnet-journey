@@ -1,0 +1,14 @@
+/Users/goncaloduque/Desktop/DotNetJourney/bin/Debug/net10.0/DotNetJourney
+/Users/goncaloduque/Desktop/DotNetJourney/bin/Debug/net10.0/DotNetJourney.deps.json
+/Users/goncaloduque/Desktop/DotNetJourney/bin/Debug/net10.0/DotNetJourney.runtimeconfig.json
+/Users/goncaloduque/Desktop/DotNetJourney/bin/Debug/net10.0/DotNetJourney.dll
+/Users/goncaloduque/Desktop/DotNetJourney/bin/Debug/net10.0/DotNetJourney.pdb
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.GeneratedMSBuildEditorConfig.editorconfig
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.AssemblyInfoInputs.cache
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.AssemblyInfo.cs
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.csproj.CoreCompileInputs.cache
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.dll
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/refint/DotNetJourney.dll
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.pdb
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.genruntimeconfig.cache
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/ref/DotNetJourney.dll
