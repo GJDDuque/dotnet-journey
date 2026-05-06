@@ -12,3 +12,4 @@
 /Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.pdb
 /Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.genruntimeconfig.cache
 /Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/ref/DotNetJourney.dll
+/Users/goncaloduque/Desktop/DotNetJourney/obj/Debug/net10.0/DotNetJourney.sourcelink.json

@@ -1,0 +1,6 @@
+ID: 1, Status: New, Amount: 150
+ID: 2, Status: Shipped, Amount: 300
+ID: 3, Status: New, Amount: 75
+ID: 4, Status: Shipped, Amount: 500
+ID: 5, Status: Cancelled, Amount: 90
+ID: 6, Status: New, Amount: 200

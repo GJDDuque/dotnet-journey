@@ -16,7 +16,9 @@ public class OrderAnalyser
         };
 
         var newOrders = orders.Where(o => o.Status == "New").OrderByDescending(o => o.Amount);
-        Console.WriteLine("New Orders: " + newOrders.ToList());
+        Console.WriteLine("New Orders:");
+        foreach (var order in newOrders)
+        Console.WriteLine($"  Id: {order.Id}, Status: {order.Status}, Amount: {order.Amount}");
 
         var totalShipped = orders.Where(o => o.Status == "Shipped").Sum(o => o.Amount);
         Console.WriteLine("Total Shipped Amount: " + totalShipped);
@@ -24,24 +26,29 @@ public class OrderAnalyser
         var customerTotals = orders.GroupBy(o => o.CustomerId)
                                     .Select(g => new { CustomerId = g.Key, TotalOrders = g.Count() , TotalAmount = g.Sum(o => o.Amount)})
                                     .OrderByDescending(c => c.TotalAmount);
-        Console.WriteLine("Customer Totals: " + customerTotals.ToList());
+        foreach (var c in customerTotals)
+            Console.WriteLine($"  Customer {c.CustomerId}: {c.TotalOrders} orders, £{c.TotalAmount}");
 
         var orderAbove400 = orders.Any(o => o.Amount > 400);
         Console.WriteLine("Any order above 400: " + orderAbove400);
 
-        var highestOrder = orders.OrderByDescending(o => o.Amount).FirstOrDefault();
-        Console.WriteLine("Highest Order: " + highestOrder);
+        var highest = orders.OrderByDescending(o => o.Amount).FirstOrDefault();
+        Console.WriteLine($"\nHighest: Id {highest?.Id}, Amount {highest?.Amount}");
+
+        int linesWritten = OrderAnalyser.WriteOrdersToFile(orders);
+        Console.WriteLine($"\nWrote {linesWritten} lines to orders.txt");
     }
 
-    public int WriteOrdersToFile(List<Order> orders)
+    public static int WriteOrdersToFile(List<Order> orders)
     {
-        var filePath = "orders.txt";
-        using var writer = new StreamWriter(filePath);
+        int linesWritten = 0;
+        using var writer = new StreamWriter("/Users/goncaloduque/Desktop/DotNetJourney/orders.txt");
         foreach (var order in orders)
         {
-            writer.WriteLine($"Order ID: {order.Id}, Status: {order.Status}, Amount: {order.Amount}");
+            writer.WriteLine($"ID: {order.Id}, Status: {order.Status}, Amount: {order.Amount}");
+            linesWritten++;
         }
-        return orders.Count;
+        return linesWritten;
     }
 
 }
