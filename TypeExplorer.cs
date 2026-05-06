@@ -9,7 +9,7 @@ public class TypeExplorer
     class WeatherStation
     {
         public Temperature CurrentTemperature { get; set; }
-        public string Location { get; set; }
+        public string? Location { get; set; }
     }
 
     public static async Task Main()

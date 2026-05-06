@@ -22,22 +22,22 @@ public class OrderExplorer
             new(6, "New",      2000, "Sixth order"),
         };
 
-        var classifiedOrders = orders.Select(o => (Order: o, Classification: new OrderExplorer().ClassifyOrder(o)));
+        var classifiedOrders = orders.Select(o => (Order: o, Classification: ClassifyOrder(o)));
         foreach (var (order, classification) in classifiedOrders)
             Console.WriteLine($"Order {order.Id}: {classification}");
 
-        var newOrderRequest = new OrderExplorer().CreateOrder(id: 7,
+        var newOrderRequest = CreateOrder(id: 7,
             status: "New",
             amount: 1200,
             notes: "Seventh order"
         );
         Console.WriteLine($"Created order request: Id {newOrderRequest.Id}, Status {newOrderRequest.Status}, Amount {newOrderRequest.Amount}, Notes: {newOrderRequest.Notes}");
 
-        var shipOrder = new OrderExplorer().MarkAsShipped(orders[3]);
+        var shipOrder = MarkAsShipped(orders[3]);
         Console.WriteLine($"Order {orders[3].Id} marked as: {shipOrder.Status}");
     }
 
-    string ClassifyOrder(Order order)
+    static string ClassifyOrder(Order? order)
     {
         return order switch
         {
@@ -50,7 +50,7 @@ public class OrderExplorer
         };
     }
 
-    public CreateOrderRequest CreateOrder(int id, string status, decimal amount, string? notes)
+    static public CreateOrderRequest CreateOrder(int id, string status, decimal amount, string? notes)
     {
         return new CreateOrderRequest
         {
@@ -61,7 +61,7 @@ public class OrderExplorer
         };
     }
 
-    Order MarkAsShipped(Order order)
+    static Order MarkAsShipped(Order order)
     {
         return order with { Status = "Shipped" };
     }
