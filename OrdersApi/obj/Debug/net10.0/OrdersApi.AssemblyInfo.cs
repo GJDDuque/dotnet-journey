@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrdersApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08cc06887231ae38cf6e5e87e580cdb7f9fa01b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5167fd5cda241345ced44c928718431e1497a868")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrdersApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrdersApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

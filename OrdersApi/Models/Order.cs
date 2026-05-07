@@ -17,8 +17,8 @@ public class StatusSummary
 
 public class OrderSummary
 {
-    public int totalOrders { get; set; }
-    public decimal totalAmount { get; set; }
+    public int TotalOrders { get; set; }
+    public decimal TotalAmount { get; set; }
     public IEnumerable<StatusSummary> StatusSummaries { get; set; } = Enumerable.Empty<StatusSummary>();
 
 }

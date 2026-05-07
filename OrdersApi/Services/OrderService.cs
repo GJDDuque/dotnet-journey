@@ -54,16 +54,20 @@ public class OrderService : IOrderService
 
     public OrderSummary GetSummary()
     {
-        var totalOrders = _orders.Count();
-        var totalAmount = _orders.Sum(o => o.Amount);
         var summary = _orders.GroupBy(o => o.Status)
-            .Select(g => new StatusSummary { Status = g.Key, Count = g.Count(), Amount = g.Sum(o => o.Amount) });
+            .Select(g => new StatusSummary 
+            { 
+                Status = g.Key, 
+                Count = g.Count(), 
+                Amount = g.Sum(o => o.Amount) 
+            })
+            .ToList();
     
 
         return new OrderSummary
         {
-            totalOrders = totalOrders,
-            totalAmount = totalAmount,
+            TotalOrders = _orders.Count,
+            TotalAmount = _orders.Sum(o => o.Amount),
             StatusSummaries = summary
         };
     }
