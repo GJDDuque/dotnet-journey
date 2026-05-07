@@ -44,14 +44,14 @@ public class OrdersController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public IActionResult UpdateOrderRequest(int id, string Status)
+    public IActionResult UpdateOrderRequest(int id, [FromBody] UpdateOrderRequest request)
     {
         if(id != 1 && id != 2)
             return NotFound(new { Message = $"Order {id} not found." });
-        if (string.IsNullOrWhiteSpace(Status))
+        if (string.IsNullOrWhiteSpace(request.Status))
             return BadRequest(new { Message = "Status is required." });
 
-        return Ok(new { Id = id, Status = Status});
+        return Ok(new { Id = id, Status = request.Status });
     }
 
     [HttpDelete("{id}")]
