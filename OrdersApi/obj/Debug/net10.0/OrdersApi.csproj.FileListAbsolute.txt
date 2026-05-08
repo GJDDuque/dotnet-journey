@@ -144,3 +144,11 @@
 /Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/bin/Debug/net10.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/obj/Debug/net10.0/OrdersApi.csproj.AssemblyReference.cache
 /Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/obj/Debug/net10.0/OrdersApi.csproj.Up2Date
+/Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/bin/Debug/net10.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/bin/Debug/net10.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/bin/Debug/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/bin/Debug/net10.0/Microsoft.IdentityModel.Logging.dll
+/Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/bin/Debug/net10.0/Microsoft.IdentityModel.Protocols.dll
+/Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/bin/Debug/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/bin/Debug/net10.0/Microsoft.IdentityModel.Tokens.dll
+/Users/goncaloduque/Desktop/DotNetJourney/OrdersApi/bin/Debug/net10.0/System.IdentityModel.Tokens.Jwt.dll
