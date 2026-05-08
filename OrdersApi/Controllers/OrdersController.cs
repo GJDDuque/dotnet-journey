@@ -16,49 +16,49 @@ public class OrdersController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetAll([FromQuery] string? status)
+    public async Task<IActionResult> GetAll([FromQuery] string? status)
     {
-        var orders = _orderService.GetAll(status);
+        var orders = await _orderService.GetAll(status);
         return Ok(orders);
     }
 
     [HttpGet("{id}")]
-    public IActionResult GetById(int id)
+    public async Task<IActionResult> GetById(int id)
     {
-        var order = _orderService.GetById(id);
+        var order = await _orderService.GetById(id);
         return order is null ? 
             NotFound(new { Message = $"Order {id} not found." }) 
             : Ok(order);
     }
 
     [HttpPost]
-    public IActionResult Create([FromBody] CreateOrderRequest request)
+    public async Task<IActionResult> Create([FromBody] CreateOrderRequest request)
     {
-        var order = _orderService.Create(request);
-        return CreatedAtAction(nameof(GetById), new { id = order.id }, order);
+        var order = await _orderService.Create(request);
+        return CreatedAtAction(nameof(GetById), new { id = order.Id }, order);
     }
 
     [HttpPut("{id}")]
-    public IActionResult UpdateOrderRequest(int id, [FromBody] UpdateOrderRequest request)
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateOrderRequest request)
     {
-        var updated = _orderService.Update(id, request);
+        var updated = await _orderService.Update(id, request);
         return updated is null ?
             NotFound(new { Message = $"Order {id} not found." })
             : Ok(updated);
     }
 
     [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
+    public async Task<IActionResult> Delete(int id)
     {
-        var deleted = _orderService.Delete(id);
+        var deleted = await _orderService.Delete(id);
         return deleted ? NoContent()
             : NotFound(new { Message = $"Order {id} not found." });
     }
 
     [HttpGet("summary")]
-    public IActionResult GetSummary()
+    public async Task<IActionResult> GetSummary()
     {
-        var summary = _orderService.GetSummary();
+        var summary = await _orderService.GetSummary();
         return Ok(summary);
     }
 }

@@ -4,10 +4,10 @@ namespace OrdersApi.Services;
 
 public interface IOrderService
 {
-    IEnumerable<Order> GetAll(string? status);
-    Order? GetById(int id);
-    Order Create(CreateOrderRequest request);
-    Order? Update(int id, UpdateOrderRequest request);
-    bool Delete(int id);
-    OrderSummary GetSummary();
+    Task<IEnumerable<Order>> GetAll(string? status);
+    Task<Order?> GetById(int id);
+    Task<Order> Create(CreateOrderRequest request);
+    Task<Order?> Update(int id, UpdateOrderRequest request);
+    Task<bool> Delete(int id);
+    Task<OrderSummary> GetSummary();
 }

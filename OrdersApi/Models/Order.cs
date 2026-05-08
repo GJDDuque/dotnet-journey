@@ -1,9 +1,10 @@
 namespace OrdersApi.Models;
 
-public record Order
+public class Order
 {
-    public int id { get; set; }
+    public int Id { get; set; }
+    public string CustomerName { get; set; } = string.Empty;
     public string Status { get; set; } = string.Empty;
     public decimal Amount { get; set; }
-    public string CustomerName { get; set; } = string.Empty;
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
