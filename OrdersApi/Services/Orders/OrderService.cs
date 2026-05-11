@@ -30,7 +30,7 @@ public class OrderService : IOrderService
     {
         var order = new Order
         {
-            CustomerName = request.CustomerName,
+            CustomerId = request.CustomerId,
             Amount = request.Amount,
             Status = "New",
             CreatedAt = DateTime.UtcNow

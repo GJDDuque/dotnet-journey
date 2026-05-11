@@ -1,1 +1,0 @@
-public record CreateOrderRequest(string CustomerName, decimal Amount);
